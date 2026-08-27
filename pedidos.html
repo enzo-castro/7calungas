@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="7calungas - Faça seu pedido especial personalizado"
+    >
+
+    <title>7calungas | Pedido Especial</title>
+
+
+    <!-- BOOTSTRAP -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- CSS PRINCIPAL -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- CSS DOS PEDIDOS -->
+
+    <link
+        rel="stylesheet"
+        href="pedidos.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container">
+
+        <a
+            class="navbar-brand"
+            href="index.html"
+        >
+            7CALUNGAS
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarPedidos"
+        >
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarPedidos"
+        >
+
+            <ul class="navbar-nav me-auto">
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html"
+                    >
+                        Início
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="produtos.html"
+                    >
+                        Produtos
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="pedidos.html"
+                    >
+                        ✨ Pedido especial
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <button
+                class="cart-button"
+                type="button"
+                onclick="abrirCarrinho()"
+            >
+
+                🛒 Carrinho
+
+                <span id="contadorCarrinho">
+                    0
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     CONTEÚDO
+===================================================== -->
+
+<main class="pedido-page">
+
+
+    <section class="container">
+
+
+        <div class="pedido-hero">
+
+            <span class="pedido-tag">
+                ✨ PEDIDO ESPECIAL
+            </span>
+
+
+            <h1>
+
+                Crie algo
+                <span>exclusivo</span>
+                para você
+
+            </h1>
+
+
+            <p>
+
+                Conte para nós o que você deseja.
+                Nossa equipe poderá analisar sua ideia
+                e preparar uma proposta personalizada.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             FORMULÁRIO
+        ================================================== -->
+
+        <div class="pedido-container">
+
+
+            <div class="pedido-info">
+
+                <div class="pedido-info-icon">
+                    ✨
+                </div>
+
+
+                <h2>
+                    Seu pedido
+                </h2>
+
+
+                <p>
+
+                    Preencha os dados ao lado com o máximo
+                    de detalhes possível.
+
+                </p>
+
+
+                <div class="pedido-dica">
+
+                    💡 <strong>Dica:</strong>
+
+                    explique cores, tamanho, modelo,
+                    quantidade e qualquer detalhe
+                    importante para o seu pedido.
+
+                </div>
+
+            </div>
+
+
+
+            <form
+                id="formPedidoPersonalizado"
+                class="pedido-form"
+            >
+
+
+                <!-- NOME -->
+
+                <div class="form-group">
+
+                    <label for="nomePersonalizado">
+                        Seu nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nomePersonalizado"
+                        placeholder="Digite seu nome"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- CONTATO -->
+
+                <div class="form-group">
+
+                    <label for="contatoPersonalizado">
+                        Forma de contato
+                    </label>
+
+                    <input
+                        type="text"
+                        id="contatoPersonalizado"
+                        placeholder="WhatsApp, telefone ou e-mail"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- CEP -->
+
+                <div class="form-group">
+
+                    <label for="cepPersonalizado">
+                        CEP
+                    </label>
+
+                    <input
+                        type="text"
+                        id="cepPersonalizado"
+                        placeholder="00000-000"
+                        maxlength="9"
+                    >
+
+                </div>
+
+
+
+                <!-- CATEGORIA -->
+
+                <div class="form-group">
+
+                    <label for="categoriaPersonalizada">
+                        Categoria
+                    </label>
+
+
+                    <select
+                        id="categoriaPersonalizada"
+                    >
+
+                        <option value="">
+                            Selecione uma categoria
+                        </option>
+
+                        <option value="Guia">
+                            🧿 Guia
+                        </option>
+
+                        <option value="Exu">
+                            🔴 Exu
+                        </option>
+
+                        <option value="Pomba Gira">
+                            🔥 Pomba Gira
+                        </option>
+
+                        <option value="Preto Velho">
+                            🤎 Preto Velho
+                        </option>
+
+                        <option value="Caboclo">
+                            🌿 Caboclo
+                        </option>
+
+                        <option value="Boiadeiro">
+                            🐎 Boiadeiro
+                        </option>
+
+                        <option value="Erê">
+                            ✨ Erê
+                        </option>
+
+                        <option value="Cigano">
+                            🔮 Cigano
+                        </option>
+
+                        <option value="Orixá">
+                            ⚡ Orixá
+                        </option>
+
+                        <option value="Outro">
+                            ⭐ Outro
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- DESCRIÇÃO -->
+
+                <div class="form-group">
+
+                    <label for="descricaoPersonalizada">
+
+                        Descreva seu pedido
+
+                    </label>
+
+
+                    <textarea
+                        id="descricaoPersonalizada"
+                        rows="7"
+                        placeholder="Descreva aqui como você gostaria que fosse seu produto..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- QUANTIDADE -->
+
+                <div class="form-group">
+
+                    <label for="quantidadePersonalizada">
+
+                        Quantidade
+
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="quantidadePersonalizada"
+                        min="1"
+                        value="1"
+                    >
+
+                </div>
+
+
+
+                <!-- BOTÃO -->
+
+                <button
+                    type="submit"
+                    class="send-custom-order"
+                >
+
+                    ✨ Enviar pedido especial
+
+                </button>
+
+
+                <p
+                    id="resultadoPedido"
+                    class="resultado-pedido"
+                ></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <h3>
+            7CALUNGAS
+        </h3>
+
+
+        <p>
+            Sua loja de acessórios
+            e pedidos personalizados.
+        </p>
+
+
+        <p>
+            © 2026 7calungas.
+            Todos os direitos reservados.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     BOOTSTRAP
+===================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- =====================================================
+     ÚNICO JAVASCRIPT DO SITE
+===================================================== -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

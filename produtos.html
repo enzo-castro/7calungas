@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="7calungas - Catálogo de produtos"
+    >
+
+    <title>7calungas | Produtos</title>
+
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="produtos.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container">
+
+        <a
+            class="navbar-brand"
+            href="index.html"
+        >
+            7CALUNGAS
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarPrincipal"
+        >
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarPrincipal"
+        >
+
+            <ul class="navbar-nav me-auto">
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html"
+                    >
+                        Início
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="produtos.html"
+                    >
+                        Produtos
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <form
+                class="d-flex"
+                onsubmit="return false;"
+            >
+
+                <input
+                    id="campoPesquisa"
+                    class="form-control me-2 search-box"
+                    type="search"
+                    placeholder="Buscar produto..."
+                >
+
+
+                <button
+                    class="btn btn-search"
+                    onclick="pesquisarProdutos()"
+                    type="button"
+                >
+                    🔎
+                </button>
+
+            </form>
+
+
+            <button
+                class="cart-button"
+                onclick="abrirCarrinho()"
+            >
+
+                🛒 Carrinho
+
+                <span id="contadorCarrinho">
+                    0
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     CABEÇALHO
+===================================================== -->
+
+<section class="container">
+
+    <div class="products-header">
+
+        <h1>
+
+            Nossos
+            <span>produtos</span>
+
+        </h1>
+
+
+        <p>
+
+            Encontre o produto ideal para você.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORIAS
+===================================================== -->
+
+<section class="container">
+
+    <div class="product-filters">
+
+        <a href="produtos.html">
+            Todos
+        </a>
+
+        <a href="produtos.html?categoria=guias">
+            🧿 Guias
+        </a>
+
+        <a href="produtos.html?categoria=exu">
+            🔴 Exu
+        </a>
+
+        <a href="produtos.html?categoria=pomba-gira">
+            🔥 Pomba Gira
+        </a>
+
+        <a href="produtos.html?categoria=preto-velho">
+            Preto Velho
+        </a>
+
+        <a href="produtos.html?categoria=caboclos">
+            Caboclos
+        </a>
+
+        <a href="produtos.html?categoria=ere">
+            Erê
+        </a>
+
+        <a href="produtos.html?categoria=ciganos">
+            Ciganos
+        </a>
+
+        <a href="produtos.html?categoria=orixas">
+            Orixás
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUTOS
+===================================================== -->
+
+<section
+    id="produtos"
+    class="container"
+>
+
+
+    <div
+        id="listaProdutos"
+        class="row g-4"
+    >
+
+
+        <!-- 1 -->
+
+        <div
+            class="col-12 col-sm-6 col-lg-4 produto-item"
+            data-nome="Guia de Proteção"
+            data-categoria="guias"
+        >
+
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="img/guia.jpg"
+                        class="product-image"
+                        alt="Guia de Proteção"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Guia de Proteção
+                    </h3>
+
+                    <p class="product-description">
+                        Guia de proteção personalizado
+                        com acabamento especial.
+                    </p>
+
+                    <div class="price">
+                        R$ 49,90
+                    </div>
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 1,
+                            nome: 'Guia de Proteção',
+                            preco: 49.90,
+                            imagem: 'img/guia.jpg',
+                            categoria: 'guias'
+                        })"
+                    >
+                        🛒 Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 2 -->
+
+        <div
+            class="col-12 col-sm-6 col-lg-4 produto-item"
+            data-nome="Acessório Exu"
+            data-categoria="exu"
+        >
+
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="img/exu.jpg"
+                        class="product-image"
+                        alt="Acessório Exu"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Acessório Exu
+                    </h3>
+
+                    <p class="product-description">
+                        Acessório com acabamento
+                        personalizado.
+                    </p>
+
+                    <div class="price">
+                        R$ 59,90
+                    </div>
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 2,
+                            nome: 'Acessório Exu',
+                            preco: 59.90,
+                            imagem: 'img/exu.jpg',
+                            categoria: 'exu'
+                        })"
+                    >
+                        🛒 Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 3 -->
+
+        <div
+            class="col-12 col-sm-6 col-lg-4 produto-item"
+            data-nome="Acessório Pomba Gira"
+            data-categoria="pomba-gira"
+        >
+
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="img/pomba-gira.jpg"
+                        class="product-image"
+                        alt="Acessório Pomba Gira"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Acessório Pomba Gira
+                    </h3>
+
+                    <p class="product-description">
+                        Modelo personalizado com
+                        acabamento especial.
+                    </p>
+
+                    <div class="price">
+                        R$ 69,90
+                    </div>
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 3,
+                            nome: 'Acessório Pomba Gira',
+                            preco: 69.90,
+                            imagem: 'img/pomba-gira.jpg',
+                            categoria: 'pomba-gira'
+                        })"
+                    >
+                        🛒 Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 4 -->
+
+        <div
+            class="col-12 col-sm-6 col-lg-4 produto-item"
+            data-nome="Acessório Preto Velho"
+            data-categoria="preto-velho"
+        >
+
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="img/preto-velho.jpg"
+                        class="product-image"
+                        alt="Acessório Preto Velho"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Acessório Preto Velho
+                    </h3>
+
+                    <p class="product-description">
+                        Modelo especial e personalizado.
+                    </p>
+
+                    <div class="price">
+                        R$ 54,90
+                    </div>
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 4,
+                            nome: 'Acessório Preto Velho',
+                            preco: 54.90,
+                            imagem: 'img/preto-velho.jpg',
+                            categoria: 'preto-velho'
+                        })"
+                    >
+                        🛒 Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 5 -->
+
+        <div
+            class="col-12 col-sm-6 col-lg-4 produto-item"
+            data-nome="Acessório Caboclo"
+            data-categoria="caboclos"
+        >
+
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="img/caboclo.jpg"
+                        class="product-image"
+                        alt="Acessório Caboclo"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Acessório Caboclo
+                    </h3>
+
+                    <p class="product-description">
+                        Acessório inspirado em
+                        caboclos e tradições.
+                    </p>
+
+                    <div class="price">
+                        R$ 64,90
+                    </div>
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 5,
+                            nome: 'Acessório Caboclo',
+                            preco: 64.90,
+                            imagem: 'img/caboclo.jpg',
+                            categoria: 'caboclos'
+                        })"
+                    >
+                        🛒 Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 6 -->
+
+        <div
+            class="col-12 col-sm-6 col-lg-4 produto-item"
+            data-nome="Acessório Boiadeiro"
+            data-categoria="caboclos"
+        >
+
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="img/boiadeiro.jpg"
+                        class="product-image"
+                        alt="Acessório Boiadeiro"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Acessório Boiadeiro
+                    </h3>
+
+                    <p class="product-description">
+                        Modelo personalizado para
+                        sua coleção.
+                    </p>
+
+                    <div class="price">
+                        R$ 64,90
+                    </div>
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 6,
+                            nome: 'Acessório Boiadeiro',
+                            preco: 64.90,
+                            imagem: 'img/boiadeiro.jpg',
+                            categoria: 'caboclos'
+                        })"
+                    >
+                        🛒 Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 7 -->
+
+        <div
+            class="col-12 col-sm-6 col-lg-4 produto-item"
+            data-nome="Acessório Erê"
+            data-categoria="ere"
+        >
+
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="img/ere.jpg"
+                        class="product-image"
+                        alt="Acessório Erê"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Acessório Erê
+                    </h3>
+
+                    <p class="product-description">
+                        Modelo personalizado com
+                        acabamento especial.
+                    </p>
+
+                    <div class="price">
+                        R$ 44,90
+                    </div>
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 7,
+                            nome: 'Acessório Erê',
+                            preco: 44.90,
+                            imagem: 'img/ere.jpg',
+                            categoria: 'ere'
+                        })"
+                    >
+                        🛒 Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 8 -->
+
+        <div
+            class="col-12 col-sm-6 col-lg-4 produto-item"
+            data-nome="Acessório Cigano"
+            data-categoria="ciganos"
+        >
+
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="img/cigano.jpg"
+                        class="product-image"
+                        alt="Acessório Cigano"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Acessório Cigano
+                    </h3>
+
+                    <p class="product-description">
+                        Acessório personalizado
+                        com acabamento diferenciado.
+                    </p>
+
+                    <div class="price">
+                        R$ 74,90
+                    </div>
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 8,
+                            nome: 'Acessório Cigano',
+                            preco: 74.90,
+                            imagem: 'img/cigano.jpg',
+                            categoria: 'ciganos'
+                        })"
+                    >
+                        🛒 Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 9 -->
+
+        <div
+            class="col-12 col-sm-6 col-lg-4 produto-item"
+            data-nome="Acessório Orixá"
+            data-categoria="orixas"
+        >
+
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="img/orixa.jpg"
+                        class="product-image"
+                        alt="Acessório Orixá"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Acessório Orixá
+                    </h3>
+
+                    <p class="product-description">
+                        Modelo especial e personalizado.
+                    </p>
+
+                    <div class="price">
+                        R$ 79,90
+                    </div>
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 9,
+                            nome: 'Acessório Orixá',
+                            preco: 79.90,
+                            imagem: 'img/orixa.jpg',
+                            categoria: 'orixas'
+                        })"
+                    >
+                        🛒 Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CARRINHO
+===================================================== -->
+
+<div
+    id="overlayCarrinho"
+    class="cart-overlay"
+    onclick="fecharCarrinho()"
+></div>
+
+
+<aside
+    id="carrinhoLateral"
+    class="cart-sidebar"
+>
+
+    <div class="cart-header">
+
+        <div>
+
+            <h3>
+                🛒 Seu carrinho
+            </h3>
+
+            <span id="quantidadeCarrinho">
+                0 produtos
+            </span>
+
+        </div>
+
+
+        <button
+            class="cart-close"
+            onclick="fecharCarrinho()"
+        >
+            ✕
+        </button>
+
+    </div>
+
+
+    <div
+        id="listaCarrinho"
+        class="cart-products"
+    ></div>
+
+
+    <div class="cart-shipping">
+
+        <h4>
+            📦 Calcular frete
+        </h4>
+
+
+        <p>
+            Digite seu CEP para calcular
+            o valor aproximado.
+        </p>
+
+
+        <div class="shipping-input">
+
+            <input
+                id="cepDestino"
+                type="text"
+                placeholder="00000-000"
+                maxlength="9"
+            >
+
+
+            <button
+                onclick="executarCalculoFrete()"
+            >
+                Calcular
+            </button>
+
+        </div>
+
+
+        <div
+            id="resultadoFrete"
+            class="shipping-result"
+        ></div>
+
+    </div>
+
+
+    <div class="cart-summary">
+
+        <div class="summary-line">
+
+            <span>
+                Subtotal
+            </span>
+
+            <strong id="subtotalCarrinho">
+                R$ 0,00
+            </strong>
+
+        </div>
+
+
+        <div class="summary-line">
+
+            <span>
+                Frete
+            </span>
+
+            <strong id="freteCarrinho">
+                R$ 0,00
+            </strong>
+
+        </div>
+
+
+        <div class="summary-total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="totalCarrinho">
+                R$ 0,00
+            </strong>
+
+        </div>
+
+
+        <button
+            class="checkout-button"
+            onclick="finalizarCompra()"
+        >
+            FINALIZAR COMPRA
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<footer>
+
+    <div class="container">
+
+        <h3>
+            7CALUNGAS
+        </h3>
+
+        <p>
+            Sua loja de acessórios
+            e pedidos personalizados.
+        </p>
+
+        <p>
+            © 2026 7calungas.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

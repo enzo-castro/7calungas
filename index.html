@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="7calungas - Loja de acessórios e produtos personalizados"
+    >
+
+    <title>7calungas | Loja</title>
+     <link
+        rel="icon"
+        href="imagens/7calungas_sem_fundo.png"
+        type="image/jpeg"
+        >
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container">
+     
+        <a
+            class="navbar-brand"
+            href="index.html"
+        >
+            7CALUNGAS
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarPrincipal"
+        >
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarPrincipal"
+        >
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="index.html"
+                    >
+                        Início
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="produtos.html"
+                    >
+                        Produtos
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown"
+                    >
+                        Categorias
+                    </a>
+
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="produtos.html?categoria=guias"
+                            >
+                                🧿 Guias de proteção
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="produtos.html?categoria=exu"
+                            >
+                                🔴 Exu
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="produtos.html?categoria=pomba-gira"
+                            >
+                                🔥 Pomba Gira
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="produtos.html?categoria=preto-velho"
+                            >
+                                Preto Velho
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="produtos.html?categoria=caboclos"
+                            >
+                                Caboclos e Boiadeiros
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="produtos.html?categoria=ere"
+                            >
+                                Erê
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="produtos.html?categoria=ciganos"
+                            >
+                                Ciganos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="produtos.html?categoria=orixas"
+                            >
+                                Orixás
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#"
+                        onclick="abrirPedidoPersonalizado(); return false;"
+                    >
+                        ✨ Personalizado
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <!-- PESQUISA -->
+
+            <form
+                class="d-flex"
+                onsubmit="return false;"
+            >
+
+                <input
+                    id="campoPesquisa"
+                    class="form-control me-2 search-box"
+                    type="search"
+                    placeholder="Buscar produto..."
+                >
+
+
+                <button
+                    class="btn btn-search"
+                    type="button"
+                    onclick="pesquisarProdutos()"
+                >
+                    🔎
+                </button>
+
+            </form>
+
+
+            <!-- CARRINHO -->
+
+            <button
+                class="cart-button"
+                onclick="abrirCarrinho()"
+                type="button"
+            >
+
+                🛒 Carrinho
+
+                <span id="contadorCarrinho">
+                    0
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     PRINCIPAL
+===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     BANNER
+===================================================== -->
+
+<section class="logo-loja container">
+    <img
+        src="imagens/7calungas logo.jpeg"
+        alt="7CALUNGAS"
+        class="logo-principal"
+        
+    >
+</section>
+
+<section class="container">
+
+    <div class="banner">
+
+        <div>
+
+            <h1>
+
+                Bem-vindo à
+                <span>7calungas</span>
+
+            </h1>
+
+
+            <p>
+
+                Encontre acessórios, produtos
+                e itens personalizados feitos
+                para você.
+
+            </p>
+
+
+            <a
+                href="produtos.html"
+                class="btn-banner"
+            >
+                Ver produtos
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="container slide-produtos">
+
+    <h2 class="section-title">
+        Destaques da <span>7calungas</span>
+    </h2>
+
+    <div
+        id="carouselPecas"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
+    >
+
+        <div class="carousel-indicators">
+
+            <button
+                type="button"
+                data-bs-target="#carouselPecas"
+                data-bs-slide-to="0"
+                class="active"
+            ></button>
+
+            <button
+                type="button"
+                data-bs-target="#carouselPecas"
+                data-bs-slide-to="1"
+            ></button>
+
+            <button
+                type="button"
+                data-bs-target="#carouselPecas"
+                data-bs-slide-to="2"
+            ></button>
+
+        </div>
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img
+                    src="img/guia.jpg"
+                    class="d-block w-100"
+                    alt="Guia de Proteção"
+                >
+
+                <div class="carousel-caption">
+                    <h3>Guias de Proteção</h3>
+                    <p>Confira nossos modelos disponíveis.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img
+                    src="img/exu.jpg"
+                    class="d-block w-100"
+                    alt="Acessório Exu"
+                >
+
+                <div class="carousel-caption">
+                    <h3>Acessórios Exu</h3>
+                    <p>Peças especiais da 7calungas.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img
+                    src="img/pomba-gira.jpg"
+                    class="d-block w-100"
+                    alt="Acessório Pomba Gira"
+                >
+
+                <div class="carousel-caption">
+                    <h3>Acessórios Pomba Gira</h3>
+                    <p>Conheça nossa coleção.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselPecas"
+            data-bs-slide="prev"
+        >
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselPecas"
+            data-bs-slide="next"
+        >
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+    </div>
+
+<!-- =====================================================
+     CATEGORIAS
+===================================================== -->
+
+<section class="container">
+
+    <h2 class="section-title">
+
+        Explore nossas
+        <span>categorias</span>
+
+    </h2>
+
+
+    <div class="row g-3">
+
+
+        <div class="col-6 col-md-3">
+
+            <a
+                href="produtos.html?categoria=guias"
+                class="category d-block"
+            >
+
+                <h5>
+                    🧿 Guias
+                </h5>
+
+            </a>
+
+        </div>
+
+
+        <div class="col-6 col-md-3">
+
+            <a
+                href="produtos.html?categoria=exu"
+                class="category d-block"
+            >
+
+                <h5>
+                    🔴 Exu
+                </h5>
+
+            </a>
+
+        </div>
+
+
+        <div class="col-6 col-md-3">
+
+            <a
+                href="produtos.html?categoria=pomba-gira"
+                class="category d-block"
+            >
+
+                <h5>
+                    🔥 Pomba Gira
+                </h5>
+
+            </a>
+
+        </div>
+
+
+        <div class="col-6 col-md-3">
+
+            <a
+                href="produtos.html?categoria=orixas"
+                class="category d-block"
+            >
+
+                <h5>
+                    ✨ Orixás
+                </h5>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUTOS EM DESTAQUE
+===================================================== -->
+
+<section class="container">
+
+    <h2 class="section-title">
+
+        Produtos em
+        <span>destaque</span>
+
+    </h2>
+
+
+    <div class="row g-4">
+
+
+        <!-- PRODUTO 1 -->
+
+        <div class="col-12 col-sm-6 col-lg-4">
+
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="img/guia.jpg"
+                        class="product-image"
+                        alt="Guia de Proteção"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Guia de Proteção
+                    </h3>
+
+
+                    <p class="product-description">
+
+                        Guia de proteção personalizado
+                        com acabamento especial.
+
+                    </p>
+
+
+                    <div class="price">
+                        R$ 49,90
+                    </div>
+
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 1,
+                            nome: 'Guia de Proteção',
+                            preco: 49.90,
+                            imagem: 'img/guia.jpg',
+                            categoria: 'guias'
+                        })"
+                    >
+
+                        🛒 Comprar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUTO 2 -->
+
+        <div class="col-12 col-sm-6 col-lg-4">
+
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="img/exu.jpg"
+                        class="product-image"
+                        alt="Acessório Exu"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Acessório Exu
+                    </h3>
+
+
+                    <p class="product-description">
+
+                        Acessório com acabamento
+                        personalizado.
+
+                    </p>
+
+
+                    <div class="price">
+                        R$ 59,90
+                    </div>
+
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 2,
+                            nome: 'Acessório Exu',
+                            preco: 59.90,
+                            imagem: 'img/exu.jpg',
+                            categoria: 'exu'
+                        })"
+                    >
+
+                        🛒 Comprar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUTO 3 -->
+
+        <div class="col-12 col-sm-6 col-lg-4">
+
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="img/pomba-gira.jpg"
+                        class="product-image"
+                        alt="Acessório Pomba Gira"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Acessório Pomba Gira
+                    </h3>
+
+
+                    <p class="product-description">
+
+                        Modelo personalizado com
+                        acabamento especial.
+
+                    </p>
+
+
+                    <div class="price">
+                        R$ 69,90
+                    </div>
+
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 3,
+                            nome: 'Acessório Pomba Gira',
+                            preco: 69.90,
+                            imagem: 'img/pomba-gira.jpg',
+                            categoria: 'pomba-gira'
+                        })"
+                    >
+
+                        🛒 Comprar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="text-center mt-4">
+
+        <a
+            href="produtos.html"
+            class="btn-banner"
+        >
+            Ver todos os produtos →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PEDIDO PERSONALIZADO
+===================================================== -->
+
+<section class="container">
+
+    <div class="banner">
+
+        <div>
+
+            <h1>
+
+                Quer algo
+                <span>personalizado?</span>
+
+            </h1>
+
+
+            <p>
+
+                Descreva o que você procura
+                e envie um pedido personalizado
+                para nossa loja.
+
+            </p>
+
+
+            <button
+                class="btn-banner"
+                onclick="abrirPedidoPersonalizado()"
+            >
+
+                ✨ Fazer pedido personalizado
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     CARRINHO
+===================================================== -->
+
+<div
+    id="overlayCarrinho"
+    class="cart-overlay"
+    onclick="fecharCarrinho()"
+></div>
+
+
+<aside
+    id="carrinhoLateral"
+    class="cart-sidebar"
+>
+
+
+    <div class="cart-header">
+
+        <div>
+
+            <h3>
+                🛒 Seu carrinho
+            </h3>
+
+            <span id="quantidadeCarrinho">
+                0 produtos
+            </span>
+
+        </div>
+
+
+        <button
+            class="cart-close"
+            onclick="fecharCarrinho()"
+        >
+            ✕
+        </button>
+
+    </div>
+
+
+    <div
+        id="listaCarrinho"
+        class="cart-products"
+    ></div>
+
+
+    <div class="cart-shipping">
+
+        <h4>
+            📦 Calcular frete
+        </h4>
+
+
+        <p>
+            Digite seu CEP para calcular
+            o valor aproximado.
+        </p>
+
+
+        <div class="shipping-input">
+
+            <input
+                id="cepDestino"
+                type="text"
+                placeholder="00000-000"
+                maxlength="9"
+            >
+
+
+            <button
+                onclick="executarCalculoFrete()"
+            >
+                Calcular
+            </button>
+
+        </div>
+
+
+        <div
+            id="resultadoFrete"
+            class="shipping-result"
+        ></div>
+
+    </div>
+
+
+    <div class="cart-summary">
+
+        <div class="summary-line">
+
+            <span>
+                Subtotal
+            </span>
+
+            <strong id="subtotalCarrinho">
+                R$ 0,00
+            </strong>
+
+        </div>
+
+
+        <div class="summary-line">
+
+            <span>
+                Frete
+            </span>
+
+            <strong id="freteCarrinho">
+                R$ 0,00
+            </strong>
+
+        </div>
+
+
+        <div class="summary-total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="totalCarrinho">
+                R$ 0,00
+            </strong>
+
+        </div>
+
+
+        <button
+            class="checkout-button"
+            onclick="finalizarCompra()"
+        >
+            FINALIZAR COMPRA
+        </button>
+
+
+        <button
+            class="custom-order-button"
+            onclick="abrirPedidoPersonalizado()"
+        >
+            ✨ Pedido personalizado
+        </button>
+
+    </div>
+
+</aside>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <h3>
+            7CALUNGAS
+        </h3>
+
+        <p>
+            Sua loja de acessórios
+            e pedidos personalizados.
+        </p>
+
+        <p>
+            © 2026 7calungas.
+            Todos os direitos reservados.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

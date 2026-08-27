@@ -1,0 +1,1919 @@
+/* =========================================================
+   7CALUNGAS - STYLE CSS 2.0
+   Tema: Preto + Vermelho
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(
+            circle at top,
+            #1a0505 0%,
+            #0b0b0b 35%,
+            #050505 100%
+        );
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   VARIÁVEIS
+   ========================================================= */
+
+:root {
+    --vermelho: #e50914;
+    --vermelho-claro: #ff1a1a;
+    --vermelho-escuro: #a50000;
+
+    --preto: #050505;
+    --fundo: #0b0b0b;
+    --card: #141414;
+    --card-hover: #1b1b1b;
+
+    --cinza: #999999;
+    --cinza-claro: #cccccc;
+
+    --borda: #292929;
+
+    --sombra:
+        0 10px 30px rgba(0, 0, 0, 0.45);
+
+    --sombra-vermelha:
+        0 10px 30px rgba(229, 9, 20, 0.18);
+}
+
+
+/* =========================================================
+   SELEÇÃO DE TEXTO
+   ========================================================= */
+
+::selection {
+    background-color: var(--vermelho);
+    color: white;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7a0000;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--vermelho);
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    background:
+        linear-gradient(
+            180deg,
+            #080808,
+            #050505
+        ) !important;
+
+    border-bottom: 1px solid rgba(229, 9, 20, 0.55);
+
+    padding: 16px 0;
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.45);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.navbar-brand {
+    color: var(--vermelho) !important;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: var(--vermelho-claro) !important;
+
+    transform: scale(1.03);
+}
+
+
+/* LINKS */
+
+.nav-link {
+    color: #eeeeee !important;
+
+    font-weight: 500;
+
+    margin: 0 5px;
+
+    padding: 8px 12px !important;
+
+    border-radius: 7px;
+
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white !important;
+
+    background-color:
+        rgba(229, 9, 20, 0.12);
+}
+
+.nav-link.active {
+    color: var(--vermelho) !important;
+}
+
+
+/* =========================================================
+   BOTÃO MENU MOBILE
+   ========================================================= */
+
+.navbar-toggler {
+    border: 1px solid #555 !important;
+
+    padding: 7px 10px;
+
+    background-color: #111 !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow:
+        0 0 0 3px rgba(229, 9, 20, 0.2);
+}
+
+
+/* =========================================================
+   DROPDOWN
+   ========================================================= */
+
+.dropdown-menu {
+    background-color: #111111;
+
+    border: 1px solid #303030;
+
+    border-radius: 10px;
+
+    padding: 7px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.dropdown-item {
+    color: #eeeeee;
+
+    border-radius: 7px;
+
+    padding: 9px 12px;
+
+    transition: 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--vermelho);
+
+    color: white;
+}
+
+.dropdown-divider {
+    border-color: #333;
+}
+
+
+/* =========================================================
+   PESQUISA
+   ========================================================= */
+
+.search-box {
+    background-color: #151515;
+
+    border: 1px solid #333;
+
+    color: white;
+
+    border-radius: 8px;
+
+    min-width: 220px;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.search-box:hover {
+    border-color: #555;
+}
+
+.search-box:focus {
+    background-color: #191919;
+
+    color: white;
+
+    border-color: var(--vermelho);
+
+    box-shadow:
+        0 0 0 3px rgba(229, 9, 20, 0.15);
+
+    outline: none;
+}
+
+.search-box::placeholder {
+    color: #777;
+}
+
+
+/* BOTÃO PESQUISA */
+
+.btn-search {
+    background-color: var(--vermelho);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 8px 14px;
+
+    font-weight: bold;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+.btn-search:hover {
+    background-color: var(--vermelho-claro);
+
+    color: white;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 15px rgba(229, 9, 20, 0.25);
+}
+
+
+/* =========================================================
+   BOTÃO CARRINHO
+   ========================================================= */
+
+.btn-outline-danger {
+    border-color: var(--vermelho) !important;
+
+    color: white !important;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--vermelho) !important;
+
+    border-color: var(--vermelho) !important;
+
+    color: white !important;
+
+    box-shadow:
+        0 5px 18px rgba(229, 9, 20, 0.25);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+   ========================================================= */
+
+main.container {
+    padding-bottom: 20px;
+}
+
+
+/* =========================================================
+   BANNER
+   ========================================================= */
+
+.banner {
+    margin-top: 35px;
+
+    min-height: 340px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 55px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(229, 9, 20, 0.28),
+            transparent 40%
+        ),
+        linear-gradient(
+            110deg,
+            #080808 0%,
+            #120303 55%,
+            #250000 100%
+        );
+
+    border: 1px solid #3a1010;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.55);
+
+    isolation: isolate;
+}
+
+
+/* EFEITO DECORATIVO */
+
+.banner::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    right: -120px;
+    top: -100px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(229, 9, 20, 0.2),
+            transparent 70%
+        );
+
+    z-index: -1;
+}
+
+
+/* LINHA DECORATIVA */
+
+.banner::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 5px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ff0000,
+            #9b0000
+        );
+}
+
+
+/* TÍTULO DO BANNER */
+
+.banner h1 {
+    font-size: 50px;
+
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+
+    letter-spacing: -1px;
+}
+
+.banner h1 span {
+    color: var(--vermelho);
+
+    text-shadow:
+        0 0 20px rgba(229, 9, 20, 0.25);
+}
+
+
+/* TEXTO */
+
+.banner p {
+    color: #bdbdbd;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    max-width: 600px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   BOTÃO DO BANNER
+   ========================================================= */
+
+.btn-banner {
+    display: inline-block;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--vermelho),
+            var(--vermelho-escuro)
+        );
+
+    color: white;
+
+    padding: 13px 27px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 8px 20px rgba(229, 9, 20, 0.2);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.btn-banner:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #ff1a1a,
+            #c00000
+        );
+
+    color: white;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(229, 9, 20, 0.3);
+}
+
+
+/* =========================================================
+   TÍTULOS DAS SEÇÕES
+   ========================================================= */
+
+.section-title {
+    margin-top: 55px;
+
+    margin-bottom: 25px;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+.section-title span {
+    color: var(--vermelho);
+}
+
+
+/* =========================================================
+   CATEGORIAS
+   ========================================================= */
+
+.category {
+    background:
+        linear-gradient(
+            145deg,
+            #181818,
+            #111111
+        );
+
+    border: 1px solid #292929;
+
+    border-radius: 12px;
+
+    padding: 22px 15px;
+
+    text-align: center;
+
+    min-height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.category:hover {
+    background:
+        linear-gradient(
+            145deg,
+            #250707,
+            #140000
+        );
+
+    border-color: var(--vermelho);
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(229, 9, 20, 0.12);
+}
+
+.category h5 {
+    margin: 0;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   GRID DE PRODUTOS
+   ========================================================= */
+
+#produtos {
+    scroll-margin-top: 100px;
+}
+
+
+/* =========================================================
+   CARD DO PRODUTO
+   ========================================================= */
+
+.product-card {
+    background:
+        linear-gradient(
+            145deg,
+            #181818,
+            #101010
+        );
+
+    border: 1px solid #292929;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    height: 100%;
+
+    position: relative;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(229, 9, 20, 0.65);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.55),
+        0 5px 25px rgba(229, 9, 20, 0.08);
+
+    background:
+        linear-gradient(
+            145deg,
+            #1c1c1c,
+            #121212
+        );
+}
+
+
+/* =========================================================
+   IMAGEM DO PRODUTO
+   ========================================================= */
+
+.image-container {
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: #111;
+}
+
+.product-image {
+    height: 240px;
+
+    width: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    background-color: #222;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+
+    filter:
+        brightness(0.9);
+}
+
+
+/* =========================================================
+   BOTÃO FAVORITO
+   ========================================================= */
+
+.favorite {
+    position: absolute;
+
+    top: 14px;
+    right: 14px;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    background-color:
+        rgba(0, 0, 0, 0.75);
+
+    backdrop-filter: blur(5px);
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.favorite:hover {
+    color: #ff1a1a;
+
+    background-color:
+        rgba(30, 0, 0, 0.9);
+
+    transform:
+        scale(1.12);
+}
+
+
+/* =========================================================
+   CORPO DO CARD
+   ========================================================= */
+
+.product-body {
+    padding: 21px;
+}
+
+.product-title {
+    color: white;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    margin-bottom: 9px;
+}
+
+.product-description {
+    color: var(--cinza);
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    min-height: 42px;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   PREÇO
+   ========================================================= */
+
+.price {
+    color: var(--vermelho);
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    margin: 16px 0;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   BOTÃO COMPRAR
+   ========================================================= */
+
+.btn-buy {
+    width: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--vermelho),
+            var(--vermelho-escuro)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    color: white;
+
+    font-weight: 700;
+
+    padding: 11px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.btn-buy:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #ff1a1a,
+            #c40000
+        );
+
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(229, 9, 20, 0.22);
+}
+
+.btn-buy:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    margin-top: 80px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #080808,
+            #030303
+        );
+
+    border-top: 1px solid rgba(229, 9, 20, 0.5);
+
+    padding: 45px 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 -10px 30px rgba(0, 0, 0, 0.3);
+}
+
+footer h3 {
+    color: var(--vermelho);
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #777;
+
+    margin-bottom: 6px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE - TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    .search-box {
+        min-width: 180px;
+    }
+
+    .navbar .btn-outline-danger {
+        margin-top: 10px;
+        margin-left: 0 !important;
+    }
+
+    .banner {
+        min-height: 300px;
+
+        padding: 45px;
+    }
+
+    .banner h1 {
+        font-size: 42px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE - CELULAR
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .navbar-brand {
+        font-size: 23px;
+    }
+
+    .navbar-nav {
+        margin-top: 15px;
+    }
+
+    .nav-link {
+        margin: 2px 0;
+    }
+
+    .search-box {
+        min-width: 0;
+
+        width: 100%;
+
+        margin-top: 12px;
+    }
+
+    .btn-search {
+        margin-top: 12px;
+    }
+
+    .banner {
+        min-height: 300px;
+
+        padding: 35px 25px;
+
+        text-align: center;
+
+        border-radius: 14px;
+    }
+
+    .banner h1 {
+        font-size: 34px;
+
+        letter-spacing: -0.5px;
+    }
+
+    .banner p {
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+    .section-title {
+        font-size: 25px;
+
+        margin-top: 42px;
+    }
+
+    .product-image {
+        height: 220px;
+    }
+
+    footer {
+        margin-top: 60px;
+
+        padding: 35px 15px;
+    }
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .banner {
+        padding: 30px 18px;
+    }
+
+    .banner h1 {
+        font-size: 29px;
+    }
+
+    .banner p {
+        font-size: 15px;
+    }
+
+    .btn-banner {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 23px;
+    }
+
+    .product-body {
+        padding: 17px;
+    }
+
+    .product-title {
+        font-size: 18px;
+    }
+
+    .price {
+        font-size: 22px;
+    }
+
+    .category {
+        padding: 18px 10px;
+    }
+
+    .category h5 {
+        font-size: 14px;
+    }
+}
+/* =========================================================
+   BOTÃO DO CARRINHO
+========================================================= */
+
+.cart-button {
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e50914,
+            #a50000
+        );
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 9px 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-left: 10px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.cart-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(229, 9, 20, 0.3);
+}
+
+
+/* =========================================================
+   CONTADOR
+========================================================= */
+
+#contadorCarrinho {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 22px;
+
+    height: 22px;
+
+    padding: 0 5px;
+
+    margin-left: 5px;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    color: #e50914;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   FUNDO ESCURO
+========================================================= */
+
+.cart-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.7);
+
+    backdrop-filter: blur(3px);
+
+    z-index: 1998;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.cart-overlay.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* =========================================================
+   CARRINHO LATERAL
+========================================================= */
+
+.cart-sidebar {
+    position: fixed;
+
+    top: 0;
+
+    right: 0;
+
+    width: 430px;
+
+    max-width: 100%;
+
+    height: 100vh;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111,
+            #080808
+        );
+
+    border-left:
+        1px solid #3a1010;
+
+    z-index: 1999;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transform:
+        translateX(100%);
+
+    transition:
+        transform 0.35s ease;
+
+    box-shadow:
+        -15px 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.cart-sidebar.active {
+    transform:
+        translateX(0);
+}
+
+
+/* =========================================================
+   CABEÇALHO DO CARRINHO
+========================================================= */
+
+.cart-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px;
+
+    border-bottom:
+        1px solid #292929;
+
+    background:
+        #0b0b0b;
+}
+
+.cart-header h3 {
+    color: white;
+
+    font-size: 21px;
+
+    margin: 0 0 4px;
+
+    font-weight: 800;
+}
+
+.cart-header span {
+    color: #777;
+
+    font-size: 13px;
+}
+
+.cart-close {
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    border: 1px solid #333;
+
+    background: #151515;
+
+    color: #aaa;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.cart-close:hover {
+    background: #e50914;
+
+    border-color: #e50914;
+
+    color: white;
+}
+
+
+/* =========================================================
+   LISTA DE PRODUTOS
+========================================================= */
+
+.cart-products {
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 15px;
+}
+
+
+/* =========================================================
+   ITEM DO CARRINHO
+========================================================= */
+
+.cart-item {
+    display: flex;
+
+    gap: 12px;
+
+    padding: 14px 0;
+
+    border-bottom:
+        1px solid #242424;
+}
+
+.cart-item-image {
+    width: 75px;
+
+    height: 75px;
+
+    border-radius: 8px;
+
+    object-fit: cover;
+
+    background: #222;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-title {
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+.cart-item-price {
+    color: #e50914;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   CONTROLE DE QUANTIDADE
+========================================================= */
+
+.quantity-control {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.quantity-control button {
+    width: 27px;
+
+    height: 27px;
+
+    border-radius: 6px;
+
+    border: 1px solid #333;
+
+    background: #181818;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.quantity-control button:hover {
+    background: #e50914;
+
+    border-color: #e50914;
+}
+
+.quantity-control span {
+    min-width: 20px;
+
+    text-align: center;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   BOTÃO REMOVER
+========================================================= */
+
+.remove-product {
+    border: none;
+
+    background: transparent;
+
+    color: #777;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.remove-product:hover {
+    color: #e50914;
+
+    transform: scale(1.1);
+}
+
+
+/* =========================================================
+   CARRINHO VAZIO
+========================================================= */
+
+.empty-cart {
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: #777;
+
+    padding: 30px;
+}
+
+.empty-cart-icon {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+    opacity: 0.5;
+}
+
+.empty-cart h4 {
+    color: #ccc;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   FRETE
+========================================================= */
+
+.cart-shipping {
+    padding: 16px 20px;
+
+    border-top:
+        1px solid #292929;
+
+    border-bottom:
+        1px solid #292929;
+
+    background:
+        #0d0d0d;
+}
+
+.cart-shipping h4 {
+    color: white;
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.cart-shipping p {
+    color: #777;
+
+    font-size: 12px;
+
+    margin-bottom: 12px;
+}
+
+.shipping-input {
+    display: flex;
+
+    gap: 7px;
+}
+
+.shipping-input input {
+    flex: 1;
+
+    min-width: 0;
+
+    background: #171717;
+
+    border: 1px solid #333;
+
+    border-radius: 7px;
+
+    padding: 9px 11px;
+
+    color: white;
+
+    outline: none;
+}
+
+.shipping-input input:focus {
+    border-color: #e50914;
+
+    box-shadow:
+        0 0 0 2px rgba(229, 9, 20, 0.12);
+}
+
+.shipping-input button {
+    background: #e50914;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 7px;
+
+    padding: 0 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.shipping-input button:hover {
+    background: #ff1a1a;
+}
+
+.shipping-result {
+    margin-top: 10px;
+
+    font-size: 12px;
+
+    color: #aaa;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   RESUMO
+========================================================= */
+
+.cart-summary {
+    padding: 18px 20px;
+
+    background: #090909;
+
+    border-top:
+        1px solid #292929;
+}
+
+.summary-line {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 9px;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+.summary-line strong {
+    color: #ddd;
+}
+
+.summary-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-top: 12px;
+
+    margin-top: 10px;
+
+    border-top:
+        1px solid #292929;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+.summary-total strong {
+    color: #e50914;
+
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   FINALIZAR COMPRA
+========================================================= */
+
+.checkout-button {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e50914,
+            #a50000
+        );
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.checkout-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(229, 9, 20, 0.25);
+}
+
+
+/* =========================================================
+   FRETE - SUCESSO
+========================================================= */
+
+.frete-sucesso {
+    color: #bbb;
+
+    background:
+        rgba(0, 120, 50, 0.08);
+
+    border:
+        1px solid rgba(0, 150, 70, 0.2);
+
+    border-radius: 7px;
+
+    padding: 9px;
+}
+
+.frete-sucesso strong {
+    color: #e50914;
+}
+
+
+/* =========================================================
+   FRETE - ERRO
+========================================================= */
+
+.frete-erro {
+    color: #ff7070;
+
+    background:
+        rgba(229, 9, 20, 0.08);
+
+    border:
+        1px solid rgba(229, 9, 20, 0.2);
+
+    border-radius: 7px;
+
+    padding: 9px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE DO CARRINHO
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .cart-sidebar {
+        width: 100%;
+    }
+
+    .cart-button {
+        width: 100%;
+
+        margin-left: 0;
+
+        margin-top: 10px;
+    }
+
+    .cart-products {
+        padding: 12px;
+    }
+
+    .cart-summary {
+        padding: 15px;
+    }
+}
+/* =========================================================
+   LOGO PRINCIPAL
+========================================================= */
+
+.logo-loja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 30px;
+    padding-bottom: 5px;
+}
+
+.logo-principal {
+    width: 200px;
+    max-width: 80%;
+
+    height: auto;
+
+    object-fit: contain;
+
+}
+
+.logo-principal:hover {
+    transform: scale(1.04);
+
+}
+
+
+/* =========================================================
+   SLIDE DE PEÇAS
+========================================================= */
+
+.slide-produtos {
+    margin-top: 35px;
+}
+
+.slide-produtos .section-title {
+    margin-top: 0;
+}
+
+
+/* CARROSSEL */
+
+#carouselPecas {
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    border: 1px solid #351010;
+
+    background: #0d0d0d;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.55);
+}
+
+
+/* IMAGENS */
+
+#carouselPecas .carousel-item {
+    height: 360px;
+
+    background: #0b0b0b;
+}
+
+#carouselPecas .carousel-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: brightness(0.65);
+
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+#carouselPecas .carousel-item.active img {
+    transform: scale(1.02);
+}
+
+
+/* LEGENDA */
+
+#carouselPecas .carousel-caption {
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 70px 30px 35px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.9)
+        );
+}
+
+#carouselPecas .carousel-caption h3 {
+    color: white;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    margin-bottom: 7px;
+}
+
+#carouselPecas .carousel-caption p {
+    color: #ccc;
+
+    margin: 0;
+}
+
+
+/* SETAS */
+
+#carouselPecas .carousel-control-prev,
+#carouselPecas .carousel-control-next {
+    width: 10%;
+}
+
+#carouselPecas .carousel-control-prev-icon,
+#carouselPecas .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.65);
+
+    border-radius: 50%;
+
+    padding: 20px;
+
+    background-size: 50%;
+}
+
+
+/* INDICADORES */
+
+#carouselPecas .carousel-indicators button {
+    width: 30px;
+    height: 4px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #777;
+
+    opacity: 0.7;
+}
+
+#carouselPecas .carousel-indicators button.active {
+    background-color: #e50914;
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .logo-loja {
+        padding-top: 20px;
+    }
+
+    .logo-principal {
+        width: 145px;
+    }
+
+    .slide-produtos {
+        margin-top: 25px;
+    }
+
+    #carouselPecas .carousel-item {
+        height: 270px;
+    }
+
+    #carouselPecas .carousel-caption {
+        padding:
+            50px
+            15px
+            25px;
+    }
+
+    #carouselPecas .carousel-caption h3 {
+        font-size: 21px;
+    }
+
+    #carouselPecas .carousel-caption p {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   CELULAR PEQUENO
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .logo-principal {
+        width: 125px;
+    }
+
+    #carouselPecas .carousel-item {
+        height: 230px;
+    }
+
+    #carouselPecas .carousel-caption h3 {
+        font-size: 18px;
+    }
+
+    #carouselPecas .carousel-caption p {
+        font-size: 12px;
+    }
+
+}
