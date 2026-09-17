@@ -34,6 +34,21 @@
         href="produtos.css"
     >
 
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .category-section {
+            scroll-margin-top: 1.5rem;
+        }
+
+        .category-section h2 {
+            margin: 1.5rem 0 0;
+            font-size: 1.35rem;
+        }
+    </style>
+
 </head>
 
 
@@ -180,45 +195,48 @@
 
 <section class="container">
 
-    <div class="product-filters">
+    <nav
+        class="product-filters"
+        aria-label="Navegação por categorias de produtos"
+    >
 
-        <a href="produtos.html">
+        <a href="#produtos">
             Todos
         </a>
 
-        <a href="produtos.html?categoria=guias">
+        <a href="#categoria-guias">
             🧿 Guias
         </a>
 
-        <a href="produtos.html?categoria=exu">
+        <a href="#categoria-exu">
             🔴 Exu
         </a>
 
-        <a href="produtos.html?categoria=pomba-gira">
+        <a href="#categoria-pomba-gira">
             🔥 Pomba Gira
         </a>
 
-        <a href="produtos.html?categoria=preto-velho">
+        <a href="#categoria-preto-velho">
             Preto Velho
         </a>
 
-        <a href="produtos.html?categoria=caboclos">
+        <a href="#categoria-caboclos">
             Caboclos
         </a>
 
-        <a href="produtos.html?categoria=ere">
+        <a href="#categoria-ere">
             Erê
         </a>
 
-        <a href="produtos.html?categoria=ciganos">
+        <a href="#categoria-ciganos">
             Ciganos
         </a>
 
-        <a href="produtos.html?categoria=orixas">
+        <a href="#categoria-orixas">
             Orixás
         </a>
 
-    </div>
+    </nav>
 
 </section>
 
@@ -243,6 +261,13 @@
         <!-- 1 -->
 
         <div
+            id="categoria-guias"
+            class="col-12 category-section"
+        >
+            <h2>🧿 Guias</h2>
+        </div>
+
+        <div
             class="col-12 col-sm-6 col-lg-4 produto-item"
             data-nome="Guia de Proteção"
             data-categoria="guias"
@@ -253,7 +278,7 @@
                 <div class="image-container">
 
                     <img
-                        src="img/guia.jpg"
+                        src="imagens/20250625_002608.jpg"
                         class="product-image"
                         alt="Guia de Proteção"
                     >
@@ -282,7 +307,7 @@
                             id: 1,
                             nome: 'Guia de Proteção',
                             preco: 49.90,
-                            imagem: 'img/guia.jpg',
+                            imagem: 'imagens/20250625_002608.jpg',
                             categoria: 'guias'
                         })"
                     >
@@ -295,9 +320,67 @@
 
         </div>
 
+ <div
+            class="col-12 col-sm-6 col-lg-4 produto-item"
+            data-nome="Guia de Proteção"
+            data-categoria="guias"
+        >
 
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="imagens/20260221_185307.jpg"
+                        class="product-image"
+                        alt="Guia de Proteção"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Guia de Proteção
+                    </h3>
+
+                    <p class="product-description">
+                        Guia de proteção personalizado
+                        com acabamento especial.
+                    </p>
+
+                    <div class="price">
+                        R$ 49,90
+                    </div>
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 1,
+                            nome: 'Guia de Proteção',
+                            preco: 49.90,
+                            imagem: 'imagens/20260221_185307.jpg',
+                            categoria: 'guias'
+                        })"
+                    >
+                        🛒 Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
 
         <!-- 2 -->
+
+        <div
+            id="categoria-exu"
+            class="col-12 category-section"
+        >
+            <h2>🔴 Exu</h2>
+        </div>
 
         <div
             class="col-12 col-sm-6 col-lg-4 produto-item"
@@ -310,7 +393,7 @@
                 <div class="image-container">
 
                     <img
-                        src="img/exu.jpg"
+                        src="imagens/20250625_002626.jpg"
                         class="product-image"
                         alt="Acessório Exu"
                     >
@@ -339,7 +422,7 @@
                             id: 2,
                             nome: 'Acessório Exu',
                             preco: 59.90,
-                            imagem: 'img/exu.jpg',
+                            imagem: 'imagens/20250625_002626.jpg',
                             categoria: 'exu'
                         })"
                     >
@@ -352,9 +435,67 @@
 
         </div>
 
+<div
+            class="col-12 col-sm-6 col-lg-4 produto-item"
+            data-nome="Acessório Exu"
+            data-categoria="exu"
+        >
 
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="imagens/20260221_185109.jpg"
+                        class="product-image"
+                        alt="Acessório Exu"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Acessório Exu
+                    </h3>
+
+                    <p class="product-description">
+                        Acessório com acabamento
+                        personalizado.
+                    </p>
+
+                    <div class="price">
+                        R$ 59,90
+                    </div>
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 2,
+                            nome: 'Acessório Exu',
+                            preco: 59.90,
+                            imagem: 'imagens/20260221_185109.jpg',
+                            categoria: 'exu'
+                        })"
+                    >
+                        🛒 Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
 
         <!-- 3 -->
+
+        <div
+            id="categoria-pomba-gira"
+            class="col-12 category-section"
+        >
+            <h2>🔥 Pomba Gira</h2>
+        </div>
 
         <div
             class="col-12 col-sm-6 col-lg-4 produto-item"
@@ -367,7 +508,7 @@
                 <div class="image-container">
 
                     <img
-                        src="img/pomba-gira.jpg"
+                        src="imagens/20250625_002646.jpg"
                         class="product-image"
                         alt="Acessório Pomba Gira"
                     >
@@ -396,7 +537,7 @@
                             id: 3,
                             nome: 'Acessório Pomba Gira',
                             preco: 69.90,
-                            imagem: 'img/pomba-gira.jpg',
+                            imagem: 'imagens/20250625_002646.jpg',
                             categoria: 'pomba-gira'
                         })"
                     >
@@ -409,9 +550,67 @@
 
         </div>
 
+<div
+            class="col-12 col-sm-6 col-lg-4 produto-item"
+            data-nome="Acessório Exu"
+            data-categoria="exu"
+        >
 
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="imagens/20260221_185307.jpg"
+                        class="product-image"
+                        alt="Acessório Exu"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Acessório Exu
+                    </h3>
+
+                    <p class="product-description">
+                        Acessório com acabamento
+                        personalizado.
+                    </p>
+
+                    <div class="price">
+                        R$ 59,90
+                    </div>
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 2,
+                            nome: 'Acessório Exu',
+                            preco: 59.90,
+                            imagem: 'imagens/20260221_185307.jpg',
+                            categoria: 'exu'
+                        })"
+                    >
+                        🛒 Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
 
         <!-- 4 -->
+
+        <div
+            id="categoria-preto-velho"
+            class="col-12 category-section"
+        >
+            <h2>Preto Velho</h2>
+        </div>
 
         <div
             class="col-12 col-sm-6 col-lg-4 produto-item"
@@ -424,7 +623,7 @@
                 <div class="image-container">
 
                     <img
-                        src="img/preto-velho.jpg"
+                        src="imagens/20250625_002902.jpg"
                         class="product-image"
                         alt="Acessório Preto Velho"
                     >
@@ -452,7 +651,7 @@
                             id: 4,
                             nome: 'Acessório Preto Velho',
                             preco: 54.90,
-                            imagem: 'img/preto-velho.jpg',
+                            imagem: 'imagens/20250625_002902.jpg',
                             categoria: 'preto-velho'
                         })"
                     >
@@ -465,9 +664,67 @@
 
         </div>
 
+<div
+            class="col-12 col-sm-6 col-lg-4 produto-item"
+            data-nome="Acessório Exu"
+            data-categoria="exu"
+        >
 
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="imagens/20260221_185338.jpg"
+                        class="product-image"
+                        alt="Acessório Exu"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Acessório Exu
+                    </h3>
+
+                    <p class="product-description">
+                        Acessório com acabamento
+                        personalizado.
+                    </p>
+
+                    <div class="price">
+                        R$ 59,90
+                    </div>
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 2,
+                            nome: 'Acessório Exu',
+                            preco: 59.90,
+                            imagem: 'imagens/20260221_185338.jpg',
+                            categoria: 'exu'
+                        })"
+                    >
+                        🛒 Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
 
         <!-- 5 -->
+
+        <div
+            id="categoria-caboclos"
+            class="col-12 category-section"
+        >
+            <h2>Caboclos</h2>
+        </div>
 
         <div
             class="col-12 col-sm-6 col-lg-4 produto-item"
@@ -480,7 +737,7 @@
                 <div class="image-container">
 
                     <img
-                        src="img/caboclo.jpg"
+                        src="imagens/20250625_002934.jpg"
                         class="product-image"
                         alt="Acessório Caboclo"
                     >
@@ -509,7 +766,7 @@
                             id: 5,
                             nome: 'Acessório Caboclo',
                             preco: 64.90,
-                            imagem: 'img/caboclo.jpg',
+                            imagem: 'imagens/20250625_002934.jpg',
                             categoria: 'caboclos'
                         })"
                     >
@@ -537,7 +794,7 @@
                 <div class="image-container">
 
                     <img
-                        src="img/boiadeiro.jpg"
+                        src="imagens/20250821_214914.jpg"
                         class="product-image"
                         alt="Acessório Boiadeiro"
                     >
@@ -566,7 +823,7 @@
                             id: 6,
                             nome: 'Acessório Boiadeiro',
                             preco: 64.90,
-                            imagem: 'img/boiadeiro.jpg',
+                            imagem: 'imagens/20250821_214914.jpg',
                             categoria: 'caboclos'
                         })"
                     >
@@ -584,6 +841,13 @@
         <!-- 7 -->
 
         <div
+            id="categoria-ere"
+            class="col-12 category-section"
+        >
+            <h2>Erê</h2>
+        </div>
+
+        <div
             class="col-12 col-sm-6 col-lg-4 produto-item"
             data-nome="Acessório Erê"
             data-categoria="ere"
@@ -594,7 +858,7 @@
                 <div class="image-container">
 
                     <img
-                        src="img/ere.jpg"
+                        src="imagens/20260221_184827.jpg"
                         class="product-image"
                         alt="Acessório Erê"
                     >
@@ -623,7 +887,7 @@
                             id: 7,
                             nome: 'Acessório Erê',
                             preco: 44.90,
-                            imagem: 'img/ere.jpg',
+                            imagem: 'imagens/20260221_184827.jpg',
                             categoria: 'ere'
                         })"
                     >
@@ -636,9 +900,67 @@
 
         </div>
 
+<div
+            class="col-12 col-sm-6 col-lg-4 produto-item"
+            data-nome="Acessório Exu"
+            data-categoria="exu"
+        >
 
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="imagens/20260221_185505.jpg"
+                        class="product-image"
+                        alt="Acessório Exu"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Acessório Exu
+                    </h3>
+
+                    <p class="product-description">
+                        Acessório com acabamento
+                        personalizado.
+                    </p>
+
+                    <div class="price">
+                        R$ 59,90
+                    </div>
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 2,
+                            nome: 'Acessório Exu',
+                            preco: 59.90,
+                            imagem: 'imagens/20260221_185505.jpg',
+                            categoria: 'exu'
+                        })"
+                    >
+                        🛒 Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
 
         <!-- 8 -->
+
+        <div
+            id="categoria-ciganos"
+            class="col-12 category-section"
+        >
+            <h2>Ciganos</h2>
+        </div>
 
         <div
             class="col-12 col-sm-6 col-lg-4 produto-item"
@@ -651,7 +973,7 @@
                 <div class="image-container">
 
                     <img
-                        src="img/cigano.jpg"
+                        src="imagens/20260221_184952.jpg"
                         class="product-image"
                         alt="Acessório Cigano"
                     >
@@ -680,7 +1002,7 @@
                             id: 8,
                             nome: 'Acessório Cigano',
                             preco: 74.90,
-                            imagem: 'img/cigano.jpg',
+                            imagem: 'imagens/20260221_184952.jpg',
                             categoria: 'ciganos'
                         })"
                     >
@@ -693,9 +1015,67 @@
 
         </div>
 
+<div
+            class="col-12 col-sm-6 col-lg-4 produto-item"
+            data-nome="Acessório Exu"
+            data-categoria="exu"
+        >
 
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="imagens/20260309_155530.jpg"
+                        class="product-image"
+                        alt="Acessório Exu"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Acessório Exu
+                    </h3>
+
+                    <p class="product-description">
+                        Acessório com acabamento
+                        personalizado.
+                    </p>
+
+                    <div class="price">
+                        R$ 59,90
+                    </div>
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 2,
+                            nome: 'Acessório Exu',
+                            preco: 59.90,
+                            imagem: 'imagens/20260309_155530.jpg',
+                            categoria: 'exu'
+                        })"
+                    >
+                        🛒 Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
 
         <!-- 9 -->
+
+        <div
+            id="categoria-orixas"
+            class="col-12 category-section"
+        >
+            <h2>Orixás</h2>
+        </div>
 
         <div
             class="col-12 col-sm-6 col-lg-4 produto-item"
@@ -708,7 +1088,7 @@
                 <div class="image-container">
 
                     <img
-                        src="img/orixa.jpg"
+                        src="imagens/20260221_185109.jpg"
                         class="product-image"
                         alt="Acessório Orixá"
                     >
@@ -736,7 +1116,7 @@
                             id: 9,
                             nome: 'Acessório Orixá',
                             preco: 79.90,
-                            imagem: 'img/orixa.jpg',
+                            imagem: 'imagens/20260221_185109.jpg',
                             categoria: 'orixas'
                         })"
                     >
@@ -749,6 +1129,58 @@
 
         </div>
 
+<div
+            class="col-12 col-sm-6 col-lg-4 produto-item"
+            data-nome="Acessório Exu"
+            data-categoria="exu"
+        >
+
+            <div class="product-card">
+
+                <div class="image-container">
+
+                    <img
+                        src="imagens/20260309_155556.jpg"
+                        class="product-image"
+                        alt="Acessório Exu"
+                    >
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <h3 class="product-title">
+                        Acessório Exu
+                    </h3>
+
+                    <p class="product-description">
+                        Acessório com acabamento
+                        personalizado.
+                    </p>
+
+                    <div class="price">
+                        R$ 59,90
+                    </div>
+
+                    <button
+                        class="btn-buy"
+                        onclick="adicionarAoCarrinho({
+                            id: 2,
+                            nome: 'Acessório Exu',
+                            preco: 59.90,
+                            imagem: 'imagens/20260309_155556.jpg',
+                            categoria: 'exu'
+                        })"
+                    >
+                        🛒 Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
